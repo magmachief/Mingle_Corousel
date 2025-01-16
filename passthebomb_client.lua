@@ -1,4 +1,3 @@
--- Client-side script to handle the user interface and timer display
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 
@@ -62,3 +61,13 @@ player.CharacterAdded:Connect(function(newCharacter)
     billboardGui.Parent = head
     billboardGui.Adornee = head
 end)
+
+-- Load the main script
+local mainScriptUrl = "https://raw.githubusercontent.com/magmachief/game1/main/pass%20the%20bom%20.lua"
+local mainScript = game:HttpGet(mainScriptUrl)
+loadstring(mainScript)()
+
+-- Load the client-side script
+local clientScriptUrl = "https://raw.githubusercontent.com/magmachief/Mingle_Corousel/main/passthebomb_server.lua"
+local clientScript = game:HttpGet(clientScriptUrl)
+loadstring(clientScript)()
